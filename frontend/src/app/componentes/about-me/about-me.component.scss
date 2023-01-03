@@ -7,34 +7,26 @@ body{
         justify-content: center;
         justify-content: space-around;
     }
-    .spaces{
+    #Home{
         background-color: gray;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        #imagen{
-            height: 15%;
-            width: 35%;
-            background-color: green;
-            img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
+        width: 100%;
+        height: 500px;
+        max-width: 100%;
+        #contenido1{
+            display: flex;
+            flex-direction: row;
+            #imagen{    
+                background-color: green;
+                img{
+                    height: 15%;
+                    width: 15%;
+                }
+            }
+            #space1{
+                background-color: red;
             }
         }
-        #space1{
-            background-color: red;
-            p{}
-        }
-        #space2{
-            background-color: green;
-        }
-        #space3{
-            background-color: purple;
-        }
-        #space4{
-            background-color: brown;
-        }
+        
     }
 
 }
