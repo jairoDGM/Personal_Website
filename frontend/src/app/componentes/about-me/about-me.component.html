@@ -1,10 +1,10 @@
 <body>
     <div id="mainBar">
         <h3>Home</h3>
-        <h3>About Me</h3>
-        <h3>My Services</h3>
-        <h3>Conocimientos</h3>
-        <h3>Contacto</h3>
+        <h3>Acerca de Mi</h3>
+        <h3>Servicios</h3>
+        <h3>Mis Proyectos</h3>
+        <h3>Blog</h3> <!--link a otra pagina-->
     </div>
 
     <!--SECCION DE HOME-->
@@ -12,10 +12,11 @@
 
         <div id="contenido1">
             <div id="imagen">
-                <img src="../../../assets/images/me.png">
+                <img src="../../../assets/images/me_circular_editada.jpg">
             </div>
             <div id="space1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia error, ex aliquam accusantium ipsa numquam praesentium reiciendis corporis aliquid? Non vero quasi illum a at maxime tempora enim quae molestias?</p>
+                <p class="titulo1_home">Jairo Garcia</p>
+                <p class="texto_home">Desarrollador Full-Stack | Estudiante de Ingenieria</p>
             </div>
         </div>
 
@@ -24,22 +25,124 @@
 
     <!--SECCION DE ABOUTME-->
     <div id="AboutMe">
-        space
-        <div id="space2">space2</div>
+        <div id="contenido2">
+            <div id="imagen">
+                <img src="../../../assets/images/foto_home_editada.jpg" alt="">
+            </div>
+            <div id="contenido">
+                <h3><b>Biografia</b></h3>
+                <h1>Sobre mi</h1>
+                <p>Hola!, soy Jairo Garcia; un estudiante universitario y desarrollador Web Full-Stack viviendo 
+                en Guatemala. En mis años de experiencia como desarrollador he trabajado en el front-end y
+                back-end de paginas web, lo cual ha generado que ambos lados sean mis favoritos en un proyecto :).
+                he adquirido las habilidades necesarias para construir proyectos web que 
+                satisfagan los requerimientos del cliente.
+                </p>
+                <div id="info">
+                    <ul>
+                        <a href=""></a>
+                        <li><a href=""><img src="../../../assets/images/icons8-github.svg" alt="link github"></a></li>
+                        <li><a href=""><img src="../../../assets/images/icons8-instagram.svg" alt="link instagram"></a></li>
+                        <li><a href=""><img src="../../../assets/images/icons8-whatsapp.svg" alt="link whatsapp"></a></li>
+                        <li><a href=""><img src="../../../assets/images/icons8-facebook.svg" alt="link facebook"></a></li>
+                        <li><a href=""><img src="../../../assets/images/icons8-linkedin.svg" alt="link linkedin"></a></li>
+                    </ul>
+                </div>
+                <button>Descargar cv</button>
+            </div>
+        </div>
     </div>
     <!--SECCION DE ABOUTME-->
 
     <!--SECCION DE MYSERVICES-->
     <div id="MyServices">
-        space
-        <div id="space3">space3</div>
+        <div class="titulo">
+            <h3><b>Lo que hago</b></h3>
+            <h1>Mis Servicios</h1>
+        </div>
+        <div id="tarjetas">
+
+            <div class="card">
+                <img src="../../../assets/images/icons8-microsoft-sql-server.svg" alt="">
+                <div class="container">
+                    <h4><b>Gestion DB</b></h4>
+                    <p>Creacion de Base de datos relacionales; especificas para las caracteristicas 
+                    y necesidades de tu programa o pagina web. Empezando con diagramas ER hasta la finalizacion de tu DB</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../../../assets/images/icons8-web-design-48.png" alt="">
+                <div class="container">
+                    <h4><b>Landing Pges</b></h4>
+                    <p>Diseño y Construccion de paginas web para presentacion, ideales para negocios o Empresas 
+                    que desean ampliar sus clientes potenciales.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../../../assets/images/icons8-developer-48.png" alt="">
+                <div class="container">
+                    <h4><b>Web Apps</b></h4>
+                    <p>Creacion de un ecosistema completo para tu pagina web, desde el frontend hasta el backend, y por su puesto la Base 
+                    de Datos. Ideal para negocios que desean operar e interactuar de distintas maneras con sus clientes/usuarios</p>
+                </div>
+            </div>
+        </div>
     </div>
     <!--SECCION DE MYSERVICES-->
 
     <!--SECCION DE CONOCIMIENTOS-->
-    <div id="Conocimientos">
-        space
-        <div id="space4">space4</div>
+    <div id="proyectos">
+        <div class="titulo">
+            <h3><b>Destacados</b></h3>
+            <h1>Proyectos Realizados</h1>
+        </div>
+        <div id="proyectos">
+            <div class="card_project"><!--esto tiene que sobresaltar cuando el mouse este encima-->
+                <a href="https://github.com/jairoDGM/Proyecto_Tienda.git" target="_blank">
+                    <img src="../../../assets/images/icons8-microsoft-sql-server.svg" alt="">
+                    <div class="container">
+                        <h4><b>Tienda Virtual</b></h4>
+                        <p>Creacion de Base de datos relacionales; especificas para las caracteristicas 
+                        y necesidades de tu programa o pagina web. Empezando con diagramas ER hasta la finalizacion de tu DB</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card_project">
+                <a href="https://github.com/jairoDGM/Solucionador-Edos.git" target="_blank">
+                    <img src="../../../assets/images/icons8-microsoft-sql-server.svg" alt="">
+                    <div class="container">
+                        <h4><b>Graficadora EDO</b></h4>
+                        <p>Creacion de Base de datos relacionales; especificas para las caracteristicas 
+                        y necesidades de tu programa o pagina web. Empezando con diagramas ER hasta la finalizacion de tu DB</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card_project">
+                <a href="" target="_blank"><!--falta link en github-->
+                    <img src="../../../assets/images/icons8-microsoft-sql-server.svg" alt="">
+                    <div class="container">
+                        <h4><b>Refriteca Website</b></h4>
+                        <p>Creacion de Base de datos relacionales; especificas para las caracteristicas 
+                        y necesidades de tu programa o pagina web. Empezando con diagramas ER hasta la finalizacion de tu DB</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card_project">
+                <a href="" target="_blank"> <!--falta link en github-->
+                    <img src="../../../assets/images/icons8-microsoft-sql-server.svg" alt="">
+                    <div class="container">
+                        <h4><b>Quiniela Web</b></h4>
+                        <p>Creacion de Base de datos relacionales; especificas para las caracteristicas 
+                        y necesidades de tu programa o pagina web. Empezando con diagramas ER hasta la finalizacion de tu DB</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
     <!--SECCION DE CONOCIMIENTOS-->
 

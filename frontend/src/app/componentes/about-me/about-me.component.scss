@@ -1,32 +1,109 @@
-body{
-    background-color: blue;
-    #mainBar{
+@media screen and (min-width: 1024px) {
+    body{
         background-color: blue;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        justify-content: space-around;
-    }
-    #Home{
-        background-color: gray;
-        width: 100%;
-        height: 500px;
-        max-width: 100%;
-        #contenido1{
+        flex-direction: column;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        #mainBar{
+            background-color: blue;
             display: flex;
             flex-direction: row;
-            #imagen{    
-                background-color: green;
-                img{
-                    height: 15%;
-                    width: 15%;
+            justify-content: center;
+            justify-content: space-around;
+            height: 50px;
+        }
+        #Home{
+            background-color: gray;
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #contenido1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1%;
+                background-color: black;
+                width: 50%;
+                #imagen{    
+                    background-color: green;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        height: 15%;
+                        width: 15%;
+                        border-radius: 50%;
+                    }
+                }
+                #space1{
+                    text-align: center;
+                    background-color: red;
+                    .titulo1_home{
+                        font-size: 50px;
+                    }
+                    .texto_home{}
                 }
             }
-            #space1{
-                background-color: red;
-            }
+            
         }
-        
-    }
 
+        #AboutMe{
+            width: 100%;
+            
+            background-color: purple;
+        }
+        #MyServices{
+            width: 100%;
+            
+            background-color: aqua;
+        }
+        #proyectos{
+            width: 100%;
+            background-color: brown;
+
+        }
+    
+    }
 }
+
+
+@media screen and (max-width: 790px) {
+    body{
+        background-color: blue;
+        #mainBar{
+            background-color: blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        #Home{
+            background-color: purple;
+            width: 100%;
+            height: 500px;
+            max-width: 100%;
+            #contenido1{
+                display: flex;
+                flex-direction: row;
+                #imagen{    
+                    background-color: green;
+                    img{
+                        height: 15%;
+                        width: 15%;
+                    }
+                }
+                #space1{
+                    background-color: red;
+                }
+            }
+            
+        }
+    
+    }
+}
+
