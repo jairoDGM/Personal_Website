@@ -1,5 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+
+
 @media screen and (min-width: 1024px) {
     body{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
         background-color: blue;
         display: flex;
         flex-direction: column;
@@ -8,64 +14,94 @@
             text-decoration: none;
         }
         #mainBar{
-            background-color: blue;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            justify-content: space-around;
-            height: 50px;
+           background-color: #000;
+            width: 100%;
+            #contenedor_opciones{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 50px;
+                background-color: transparent;
+                align-items: center;
+                .opciones > a{
+                    position: relative;
+                    font-size: 15px;
+                    color: white;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        margin: -5px 0;
+                        background-color: #49c5b6;
+                        visibility: hidden;
+                        transform: scaleX(0);
+                        transition: all 0.4s ease-in-out 0s;
+                    }
+                    &:hover:before {
+                        visibility: visible;
+                        transform: scaleX(1);
+                    }
+                }
+            }
         }
         #Home{
-            background-color: gray;
             width: 100%;
-            
+            background-image: url(../../../assets/images/large-triangles.svg);
             display: flex;
             justify-content: center;
-            align-items: center;
             #contenido1{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 1%;
-                background-color: black;
-                width: 50%;
+            
+                padding-top: 2.5%;
+                padding-bottom: 2.5%;
                 #imagen{    
-                    background-color: green;
+                   
                     display: flex;
                     justify-content: center;
                     img{
-                        height: 15%;
-                        width: 15%;
+                        height: 45%;
+                        width: 45%;
                         border-radius: 50%;
                     }
                 }
-                #space1{
-                    text-align: center;
-                    background-color: red;
-                    .titulo1_home{
-                        font-size: 50px;
-                    }
-                    .texto_home{}
+            }
+            #space1{
+                text-align: center;
+                padding-top: 2%;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                #titulo1_home{
+                  
+                    font-size: 40px;
+                    padding: 2%;
+                }
+                #texto_home{
+                    padding: 1%;
+                    font-size: 20px;
+                    color: #49c5b6;
                 }
             }
-            
         }
 
         #AboutMe{
             width: 100%;
-            
-            background-color: purple;
+            background-image: linear-gradient(to left bottom, #000000, #131313, #1f1f1f, #2c2c2c, #393939);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #contenido2{
+                background-color: red;
+            }
         }
         #MyServices{
             width: 100%;
-            
-            background-color: aqua;
+            background-color: rgb(30, 29, 29);
         }
         #proyectos{
             width: 100%;
-            background-color: brown;
-
+            background-color: rgb(30, 29, 29);
         }
     
     }

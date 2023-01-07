@@ -1,10 +1,12 @@
 <body>
     <div id="mainBar">
-        <h3>Home</h3>
-        <h3>Acerca de Mi</h3>
-        <h3>Servicios</h3>
-        <h3>Mis Proyectos</h3>
-        <h3>Blog</h3> <!--link a otra pagina-->
+        <div id="contenedor_opciones">
+            <div class="opciones"><a href="#Home">Home</a></div>
+            <div class="opciones"><a href="#AboutMe">Acerca de Mi</a></div>
+            <div class="opciones"><a href="#MyServices">Servicios</a></div>
+            <div class="opciones"><a href="#proyectos">Mis Proyectos</a></div>
+            <div class="opciones"><a href="">Blog</a></div> <!--link a otra pagina-->
+        </div>
     </div>
 
     <!--SECCION DE HOME-->
@@ -15,8 +17,8 @@
                 <img src="../../../assets/images/me_circular_editada.jpg">
             </div>
             <div id="space1">
-                <p class="titulo1_home">Jairo Garcia</p>
-                <p class="texto_home">Desarrollador Full-Stack | Estudiante de Ingenieria</p>
+                <div id="titulo1_home">Jairo Garcia</div>
+                <div id="texto_home">Desarrollador Full-Stack | Estudiante de Ingenieria</div>
             </div>
         </div>
 
@@ -98,7 +100,7 @@
             <h3><b>Destacados</b></h3>
             <h1>Proyectos Realizados</h1>
         </div>
-        <div id="proyectos">
+        <div id="creaciones">
             <div class="card_project"><!--esto tiene que sobresaltar cuando el mouse este encima-->
                 <a href="https://github.com/jairoDGM/Proyecto_Tienda.git" target="_blank">
                     <img src="../../../assets/images/icons8-microsoft-sql-server.svg" alt="">
