@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 
-
-@media screen and (min-width: 1024px) {
+/*PANTALLAS COMPUTADORA GRANDES*/
+@media screen and (min-width: 2501px) {
     body{
         font-family: 'Open Sans', sans-serif;
         font-weight: bold;
@@ -13,6 +13,486 @@
             color: inherit;
             text-decoration: none;
         }
+        .button {
+            --color: #49c5b6;
+            padding: 0.8em 1.7em;
+            background-color: transparent;
+            border-radius: .3em;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .5s;
+            font-weight: 400;
+            font-size: 17px;
+            border: 1px solid;
+            font-family: inherit;
+            text-transform: uppercase;
+            color: var(--color);
+            z-index: 1;
+           }
+           
+           .button::before, .button::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color);
+            transition: 1s ease;
+           }
+           
+           .button::before {
+            top: -1em;
+            left: -1em;
+           }
+           
+           .button::after {
+            left: calc(100% + 1em);
+            top: calc(100% + 1em);
+           }
+           
+           .button:hover::before, .button:hover::after {
+            height: 410px;
+            width: 410px;
+           }
+           
+           .button:hover {
+            color: rgb(10, 25, 30);
+           }
+           
+           .button:active {
+            filter: brightness(.8);
+           }
+        #mainBar{
+           background-color: #000;
+            width: 100%;
+            #contenedor_opciones{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 65px;
+                background-color: transparent;
+                align-items: center;
+                .opciones > a{
+                    position: relative;
+                    font-size: 20px;
+                    color: white;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        margin: -5px 0;
+                        background-color: #49c5b6;
+                        visibility: hidden;
+                        transform: scaleX(0);
+                        transition: all 0.4s ease-in-out 0s;
+                    }
+                    &:hover:before {
+                        visibility: visible;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        #Home{
+            width: 100%;
+            background-image: url(../../../assets/images/low-poly-grid-haikei.svg);
+            display: flex;
+            justify-content: center;
+            #contenido1{
+                padding-top: 2.5%;
+                padding-bottom: 2.5%;
+                #imagen{    
+                   
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        height: 65%;
+                        width: 65%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            #space1{
+                text-align: center;
+                padding-top: 2%;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                #titulo1_home{
+                    font-size: 40px;
+                    padding: 2%;
+                }
+                #texto_home{
+                    padding: 1%;
+                    font-size: 20px;
+                    color: #49c5b6;
+                }
+            }
+        }
+
+        #AboutMe{
+            width: 100%;
+            background-color: #000;
+            #contenido2{
+               
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 4%;
+                #imagen{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1%;
+                    img{  
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                #info{
+                   
+                    margin: 1%;
+                    width: 60%;
+                    .subtitulo{
+                        color: #49c5b6;
+                        font-size: 55px;
+                        margin-bottom: 3%;
+                    }
+                    .titulo{
+                        color: white;
+                        font-size: 75px;
+                        text-decoration: underline;
+                        text-decoration-color: #49c5b6;
+                        margin-bottom: 4%;
+                    }
+                    .texto_plano{
+                        color: white;
+                        margin-right: 5%;
+                        margin-bottom: 4%;
+                        line-height: 200%;
+                        font-size: 30px;
+                    }
+                    #contacto{
+                        color: white;
+                        font-size: 45px;
+                    }
+                    #redes{
+                        border-style: solid;
+                        border-color: #49c5b6;
+                        display: flex;
+                        justify-content: center;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        img{
+                            height: 110px;
+                            width: 110px;
+                        }
+                        margin-bottom: 4%;
+                    }
+                }
+
+            }
+        }
+        #MyServices{
+            width: 100%;
+            background-color: rgb(30, 29, 29);
+        }
+        #proyectos{
+            width: 100%;
+            background-color: rgb(30, 29, 29);
+        }
+    
+    }
+}
+/*-------------------------------------------------------*/
+
+
+
+
+/*PANTALLAS COMPUTADORA MEDIANAS*/
+@media screen and (min-width: 1400px) and (max-width: 2501px) {
+    body{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .button {
+            --color: #49c5b6;
+            padding: 0.8em 1.7em;
+            background-color: transparent;
+            border-radius: .3em;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .5s;
+            font-weight: 400;
+            font-size: 17px;
+            border: 1px solid;
+            font-family: inherit;
+            text-transform: uppercase;
+            color: var(--color);
+            z-index: 1;
+           }
+           
+           .button::before, .button::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color);
+            transition: 1s ease;
+           }
+           
+           .button::before {
+            top: -1em;
+            left: -1em;
+           }
+           
+           .button::after {
+            left: calc(100% + 1em);
+            top: calc(100% + 1em);
+           }
+           
+           .button:hover::before, .button:hover::after {
+            height: 410px;
+            width: 410px;
+           }
+           
+           .button:hover {
+            color: rgb(10, 25, 30);
+           }
+           
+           .button:active {
+            filter: brightness(.8);
+           }
+        #mainBar{
+           background-color: #000;
+            width: 100%;
+            #contenedor_opciones{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 55px;
+                background-color: transparent;
+                align-items: center;
+                .opciones > a{
+                    position: relative;
+                    font-size: 17px;
+                    color: white;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        margin: -5px 0;
+                        background-color: #49c5b6;
+                        visibility: hidden;
+                        transform: scaleX(0);
+                        transition: all 0.4s ease-in-out 0s;
+                    }
+                    &:hover:before {
+                        visibility: visible;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        #Home{
+            width: 100%;
+            background-image: url(../../../assets/images/low-poly-grid-haikei.svg);
+            display: flex;
+            justify-content: center;
+            #contenido1{
+                padding-top: 2.5%;
+                padding-bottom: 2.5%;
+                #imagen{    
+                   
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        height: 45%;
+                        width: 45%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            #space1{
+                text-align: center;
+                padding-top: 2%;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                #titulo1_home{
+                    font-size: 40px;
+                    padding: 2%;
+                }
+                #texto_home{
+                    padding: 1%;
+                    font-size: 20px;
+                    color: #49c5b6;
+                }
+            }
+        }
+
+        #AboutMe{
+            width: 100%;
+            background-color: #000;
+            #contenido2{
+               
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 4%;
+                #imagen{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1%;
+                    img{  
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                #info{
+                   
+                    margin: 1%;
+                    width: 60%;
+                    .subtitulo{
+                        color: #49c5b6;
+                        font-size: 45px;
+                        margin-bottom: 6%;
+                    }
+                    .titulo{
+                        color: white;
+                        font-size: 65px;
+                        text-decoration: underline;
+                        text-decoration-color: #49c5b6;
+                        margin-bottom: 7%;
+                    }
+                    .texto_plano{
+                        color: white;
+                        margin-right: 5%;
+                        margin-bottom: 7%;
+                        line-height: 150%;
+                        font-size: 20px;
+                    }
+                    #contacto{
+                        color: white;
+                        font-size: 35px;
+                    }
+                    #redes{
+                        border-style: solid;
+                        border-color: #49c5b6;
+                        display: flex;
+                        justify-content: center;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        img{
+                            height: 90px;
+                            width: 90px;
+                        }
+                        margin-bottom: 6%;
+                    }
+                }
+
+            }
+        }
+        #MyServices{
+            width: 100%;
+            background-color: rgb(30, 29, 29);
+        }
+        #proyectos{
+            width: 100%;
+            background-color: rgb(30, 29, 29);
+        }
+    
+    }
+}
+/*-------------------------------------------------------*/
+
+
+
+/*PANTALLAS COMPUTADORA PEQUEÑAS*/
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    body{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .button {
+            --color: #49c5b6;
+            padding: 0.8em 1.7em;
+            background-color: transparent;
+            border-radius: .3em;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .5s;
+            font-weight: 400;
+            font-size: 17px;
+            border: 1px solid;
+            font-family: inherit;
+            text-transform: uppercase;
+            color: var(--color);
+            z-index: 1;
+           }
+           
+           .button::before, .button::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color);
+            transition: 1s ease;
+           }
+           
+           .button::before {
+            top: -1em;
+            left: -1em;
+           }
+           
+           .button::after {
+            left: calc(100% + 1em);
+            top: calc(100% + 1em);
+           }
+           
+           .button:hover::before, .button:hover::after {
+            height: 410px;
+            width: 410px;
+           }
+           
+           .button:hover {
+            color: rgb(10, 25, 30);
+           }
+           
+           .button:active {
+            filter: brightness(.8);
+           }
         #mainBar{
            background-color: #000;
             width: 100%;
@@ -48,11 +528,10 @@
         }
         #Home{
             width: 100%;
-            background-image: url(../../../assets/images/large-triangles.svg);
+            background-image: url(../../../assets/images/low-poly-grid-haikei.svg);
             display: flex;
             justify-content: center;
             #contenido1{
-            
                 padding-top: 2.5%;
                 padding-bottom: 2.5%;
                 #imagen{    
@@ -73,7 +552,6 @@
                 flex-direction: column;
                 color: white;
                 #titulo1_home{
-                  
                     font-size: 40px;
                     padding: 2%;
                 }
@@ -87,12 +565,59 @@
 
         #AboutMe{
             width: 100%;
-            background-image: linear-gradient(to left bottom, #000000, #131313, #1f1f1f, #2c2c2c, #393939);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #000;
             #contenido2{
-                background-color: red;
+               
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 4%;
+                #imagen{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1%;
+                    img{  
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                #info{
+                   
+                    margin: 1%;
+                    width: 60%;
+                    .subtitulo{
+                        color: #49c5b6;
+                        font-size: 25px;
+                        margin-bottom: 3%;
+                    }
+                    .titulo{
+                        color: white;
+                        font-size: 45px;
+                        text-decoration: underline;
+                        text-decoration-color: #49c5b6;
+                        margin-bottom: 5%;
+                    }
+                    p{
+                        color: white;
+                        margin-right: 5%;
+                        margin-bottom: 5%;
+                    }
+                    #redes{
+                        border-style: solid;
+                        border-color: #49c5b6;
+                        display: flex;
+                        justify-content: center;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        img{
+                            height: 70px;
+                            width: 70px;
+                        }
+                        margin-bottom: 4%;
+                    }
+                }
+
             }
         }
         #MyServices{
@@ -106,8 +631,11 @@
     
     }
 }
+/*-------------------------------------------------------*/
 
 
+
+/*PANTALLAS TELFONOS GENERAL*/
 @media screen and (max-width: 790px) {
     body{
         background-color: blue;
