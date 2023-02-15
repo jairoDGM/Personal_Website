@@ -1508,37 +1508,497 @@
 
 /*PANTALLAS TELFONOS GENERAL*/
 @media screen and (max-width: 1000px) {
-    body{
-        background-color: blue;
-        #mainBar{
-            background-color: blue;
+  body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    .button {
+        --color: #49c5b6;
+        padding: 0.8em 1.7em;
+        background-color: var(--color);
+        position: relative;
+
+        cursor: pointer;
+        transition: .5s;
+        font-weight: 400;
+        font-size: 13px;
+        font-family: inherit;
+        text-transform: uppercase;
+        color: white;
+        @-webkit-keyframes heartbeat {
+          from {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            -webkit-transform-origin: center center;
+                    transform-origin: center center;
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+          }
+          10% {
+            -webkit-transform: scale(0.91);
+                    transform: scale(0.91);
+            -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+          }
+          17% {
+            -webkit-transform: scale(0.98);
+                    transform: scale(0.98);
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+          }
+          33% {
+            -webkit-transform: scale(0.87);
+                    transform: scale(0.87);
+            -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+          }
+          45% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+          }
+        }
+        @keyframes heartbeat {
+          from {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            -webkit-transform-origin: center center;
+                    transform-origin: center center;
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+          }
+          10% {
+            -webkit-transform: scale(0.91);
+                    transform: scale(0.91);
+            -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+          }
+          17% {
+            -webkit-transform: scale(0.98);
+                    transform: scale(0.98);
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+          }
+          33% {
+            -webkit-transform: scale(0.87);
+                    transform: scale(0.87);
+            -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+          }
+          45% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            -webkit-animation-timing-function: ease-out;
+                    animation-timing-function: ease-out;
+          }
+        }
+
+        -webkit-animation: heartbeat 2s linear infinite both;
+	        animation: heartbeat 2s linear infinite both;
+       }
+    #mainBar{
+       background-color: #000;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        #contenedor_opciones{
             display: flex;
             flex-direction: row;
-            justify-content: center;
             justify-content: space-around;
+            height: 50px;
+            background-color: transparent;
+            align-items: center;
+            .opciones > a{
+                position: relative;
+                font-size: 10px;
+                color: white;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    margin: -5px 0;
+                    background-color: #49c5b6;
+                    visibility: hidden;
+                    transform: scaleX(0);
+                    transition: all 0.4s ease-in-out 0s;
+                }
+                &:hover:before {
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+            }
         }
-        #Home{
-            background-color: purple;
-            width: 100%;
-            height: 500px;
-            max-width: 100%;
-            #contenido1{
+    }
+    #Home{
+      padding-top: 60px;
+        width: 100%;
+        background-image: url(../../../assets/images/low-poly-grid-haikei.svg);
+        display: flex;
+        justify-content: center;
+        #contenido1{
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            #imagen{
+
                 display: flex;
-                flex-direction: row;
-                #imagen{
-                    background-color: green;
-                    img{
-                        height: 15%;
-                        width: 15%;
-                    }
+                justify-content: center;
+                img{
+                    height: 40%;
+                    width: 40%;
+                    border-radius: 50%;
                 }
-                #space1{
-                    background-color: red;
+            }
+        }
+        #space1{
+            text-align: center;
+            padding-top: 2%;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            #titulo1_home{
+                font-size: 30px;
+                padding: 2%;
+            }
+            #texto_home{
+                padding: 1%;
+                font-size: 15px;
+                color: #49c5b6;
+            }
+        }
+    }
+
+    #AboutMe{
+        width: 100%;
+        background-color: #000;
+        #contenido2{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 4%;
+            #imagen{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1%;
+                img{
+                    height: 60%;
+                    width: 60%;
+                    border-radius: 10%;
                 }
+                margin-bottom: 5%;
+            }
+            #info{
+
+                margin: 1%;
+                width: 100%;
+                .subtitulo{
+                    color: #49c5b6;
+                    font-size: 25px;
+                    margin-bottom: 3%;
+                }
+                .titulo{
+                    color: white;
+                    font-size: 35px;
+                    text-decoration: underline;
+                    text-decoration-color: #49c5b6;
+                    margin-bottom: 5%;
+                }
+                .texto_plano{
+                  color: white;
+                  margin-bottom: 7%;
+                  line-height: 150%;
+                  font-size: 15px;
+              }
+              #contacto{
+                  color: white;
+                  font-size: 35px;
+              }
+              #redes{
+                  border-style: solid;
+                  border-color: #49c5b6;
+                  display: flex;
+                  justify-content: center;
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+                  img{
+                      height: 60px;
+                      width: 60px;
+                  }
+                  img:hover{
+                      height: 67px;
+                      width: 67px;
+                  }
+                  margin-bottom: 6%;
+              }
             }
 
         }
-
     }
+    #MyServices{
+      width: 100%;
+      background-color: rgb(16, 16, 16);
+      #contenido3{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 4%;
+
+          #header{
+              .subtitulo{
+                  color: #49c5b6;
+                  font-size: 25px;
+                  margin-bottom: 2%;
+              }
+              .titulo{
+                  color: white;
+                  font-size: 35px;
+                  text-decoration: underline;
+                  text-decoration-color: #49c5b6;
+                  margin-bottom: 7%;
+              }
+          }
+          #tarjetas{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              margin: 1%;
+              .card {
+                  width: 100%;
+                  margin-top: 3%;
+                  margin-bottom: 3%;
+                  background: #f8f9fa;
+                  position: relative;
+                  box-shadow: 15px 15px 50px #adb5bd75;
+                  text-align: center;
+                  transition: all 0.3s ease-in;
+                  font-size: 15px;
+                  img{
+                      width: 50%;
+                  }
+                }
+          }
+          #conocimientos{
+
+              margin-top: 4%;
+              .titulo{
+                  color: white;
+                  font-size: 35px;
+                  text-decoration: underline;
+                  text-decoration-color: #49c5b6;
+                  margin-bottom: 7%;
+              }
+              body {
+                  align-items: center;
+                  background: #E3E3E3;
+                  display: flex;
+                  height: 100vh;
+                  justify-content: center;
+              }
+
+              @mixin white-gradient {
+                  background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+              }
+
+              $animationSpeed: 20s;
+
+              // Animation
+              @keyframes scroll {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(calc(-250px * 7))}
+              }
+
+
+              // Styling
+              .slider {
+                  background: white;
+                  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+                  height: 100px;
+                  margin: auto;
+                  overflow:hidden;
+                  position: relative;
+                  width: 260px;
+
+                  &::before,
+                  &::after {
+                      @include white-gradient;
+                      content: "";
+                      height: 100px;
+                      position: absolute;
+                      width: 200px;
+                      z-index: 2;
+                  }
+
+                  &::after {
+                      right: 0;
+                      top: 0;
+                      transform: rotateZ(180deg);
+                  }
+
+                  &::before {
+                      left: 0;
+                      top: 0;
+                  }
+
+                  .slide-track {
+                      animation: scroll $animationSpeed linear infinite;
+                      display: flex;
+                      width: calc(250px * 14);
+                  }
+
+                  .slide {
+                      height: 100px;
+                      width: 250px;
+                  }
+              }
+          }
+
+      }
+    }
+    #proyectos{
+      width: 100%;
+      background-color: black;
+      #contenido4{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 4%;
+
+          #header{
+              .subtitulo{
+                  color: #49c5b6;
+                  font-size: 25px;
+                  margin-bottom: 2%;
+              }
+              .titulo{
+                  color: white;
+                  font-size: 35px;
+                  line-height: 110%;
+                  text-decoration: underline;
+                  text-decoration-color: #49c5b6;
+                  margin-bottom: 7%;
+              }
+          }
+          #creaciones{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-between;
+            margin: 1%;
+            /*ESTILO PARA LAS CARDS*/
+            .card_project {
+                width: 45%;
+                border: 6px solid gray;
+                background: white;
+                position: relative;
+                box-shadow: 15px 15px 50px #adb5bd75;
+                text-align: center;
+                transition: all 0.3s ease-in;
+                font-size: 15px;
+                img{
+                    width: 50%;
+                }
+              }
+
+              /*ESTILOS PARA LOS BOTONES*/
+              .btn41-43 {
+                padding: 10px 25px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 500;
+                background: #49c5b6;
+                outline: none !important;
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 5%;
+                @-webkit-keyframes heartbeat {
+                  from {
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                    -webkit-transform-origin: center center;
+                            transform-origin: center center;
+                    -webkit-animation-timing-function: ease-out;
+                            animation-timing-function: ease-out;
+                  }
+                  10% {
+                    -webkit-transform: scale(0.91);
+                            transform: scale(0.91);
+                    -webkit-animation-timing-function: ease-in;
+                            animation-timing-function: ease-in;
+                  }
+                  17% {
+                    -webkit-transform: scale(0.98);
+                            transform: scale(0.98);
+                    -webkit-animation-timing-function: ease-out;
+                            animation-timing-function: ease-out;
+                  }
+                  33% {
+                    -webkit-transform: scale(0.87);
+                            transform: scale(0.87);
+                    -webkit-animation-timing-function: ease-in;
+                            animation-timing-function: ease-in;
+                  }
+                  45% {
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                    -webkit-animation-timing-function: ease-out;
+                            animation-timing-function: ease-out;
+                  }
+                }
+                @keyframes heartbeat {
+                  from {
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                    -webkit-transform-origin: center center;
+                            transform-origin: center center;
+                    -webkit-animation-timing-function: ease-out;
+                            animation-timing-function: ease-out;
+                  }
+                  10% {
+                    -webkit-transform: scale(0.91);
+                            transform: scale(0.91);
+                    -webkit-animation-timing-function: ease-in;
+                            animation-timing-function: ease-in;
+                  }
+                  17% {
+                    -webkit-transform: scale(0.98);
+                            transform: scale(0.98);
+                    -webkit-animation-timing-function: ease-out;
+                            animation-timing-function: ease-out;
+                  }
+                  33% {
+                    -webkit-transform: scale(0.87);
+                            transform: scale(0.87);
+                    -webkit-animation-timing-function: ease-in;
+                            animation-timing-function: ease-in;
+                  }
+                  45% {
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                    -webkit-animation-timing-function: ease-out;
+                            animation-timing-function: ease-out;
+                  }
+                }
+
+                -webkit-animation: heartbeat 2s linear infinite both;
+                  animation: heartbeat 2s linear infinite both;
+              }
+
+
+        }
+      }
+    }
+
+}
 }
 
